@@ -1,30 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="fluid grid.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kayaking in Norway</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header>
-       <nav>
-           <div>
-               <ul class="main-nav">
-                    <li><a href="#">Welcome</a></li>
-                    <li><a href="#">About our service</a></li>
-                    <li><a href="#">Safety information</a></li>
-                    <li><a href="#">Select location</a></li>
+    <header>
+        <div class="container">
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#info">About us</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#">Sign in</a></li>
+                </ul>
+            </nav>
+        </div>
 
-               </ul>
-
-           </div>
-       </nav>
-       <div class="text-box">
-            <h1>Kayaking in Norway. <br> Are You ready?</h1>
-            <a class="btn paddle-btn" href="#">Paddle</a>
-            <a class="btn show-more-btn" href="#">Show me more</a>
+        </div>
+    </header>
+    
+   <section class="container">
+       <div id="main">
+        <h1>Kayaking in Norway</h1>
+        <p>Are you ready?</p>
        </div>
-   </header>
+       
+    </section>
+
+    <section id="info" class="container">
+        <div class="welcome">
+            <h1>Welcome</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In molestias adipisci veritatis exercitationem excepturi? Saepe facilis at tempora corporis eius voluptas inventore? Voluptatibus ipsa molestias veritatis officiis reiciendis! Officiis accusantium atque quibusdam perspiciatis sunt eum, distinctio ea ab asperiores quasi dignissimos iure iusto quas labore quos. Ad quisquam assumenda sunt!</p>
+        </div>
+
+        <div class="about">
+            <h1>About our service</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae iure temporibus iusto itaque architecto, maxime impedit corrupti nulla reprehenderit harum dolorem, sint debitis incidunt rem ad totam alias nam adipisci consequuntur ullam minus facere quos nemo. Debitis optio rerum, similique, inventore molestiae perspiciatis eligendi repellat fuga sint provident harum animi consequatur commodi, quisquam cupiditate repellendus! Beatae dolores ipsum voluptatibus, voluptatem vitae commodi explicabo amet.</p>
+        </div>
+
+        <div class="safety">
+            <h1>Safety information</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis neque beatae consectetur ab tenetur iusto eligendi quidem, perferendis temporibus. Enim labore placeat mollitia fuga dolor unde in culpa maiores, aliquid a possimus, ratione error pariatur. Sunt ipsa modi doloribus at debitis aliquam mollitia numquam minima.</p>
+        </div>
+    </section>
+
+    <section id="locations" class="container">
+        <div class="heading">
+            <h1>Please select your location</h1>
+        </div>
+
+        <div class="oslo">
+            <p id="oslo">Oslo</p>
+        </div>
+
+        <div class="oslo-p">
+            <p>Oslo is the capital and most populous city of Norway. It constitutes both a county and a municipality. During the Viking Age the area was part of Viken, the northernmost Danish province. Oslo was founded as a city at the end of the Viking Age in the year 1040 under the name Ánslo, and established as a kaupstad or trading place in 1048 by Harald Hardrada. <a href="https://en.wikipedia.org/wiki/Oslo" target="_blank">Read more.</a></p>
+        </div>
+
+        <div class="oslo-btn">
+            <a href="#">Pick Oslo</a>
+        </div>
+
+        <div class="trondheim">
+            <p id="trondheim">Trondheim</p>
+        </div>
+
+        <div class="trondheim-p">
+            <p>Trondheim, historically Kaupangen, Nidaros and Trondhjem, is a city and municipality in Trøndelag county, Norway. It has a population of 199,039 (27/02/2020),and is the third most populous municipality in Norway, although the fourth largest urban area. Trondheim lies on the south shore of Trondheim Fjord at the mouth of the River Nidelva. <a href="https://en.wikipedia.org/wiki/Trondheim" target="_blank">Read more.</a></p>
+        </div>
+
+        <div class="trondheim-btn">
+            <a href="#">Pick Trondheim</a>
+        </div>
+
+        <div class="stavanger">
+            <p id="stavanger">Stavanger</p>
+        </div>
+
+        <div class="stavanger-p">
+            <p>Stavanger is a city and municipality in Norway. It is the fourth largest city and third largest metropolitan area in Norway (through conurbation with neighbouring Sandnes) and the administrative centre of Rogaland county. The municipality is the fourth most populous in Norway. <a href="https://en.wikipedia.org/wiki/Stavanger" target="_blank">Read more.</a></p>
+        </div>
+
+        <div class="stavanger-btn">
+            <a href="#">Pick Stavanger</a>
+        </div>
+    </section>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>2020 - Csilla Posa - Akademi for Programmering Oslo</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,97 +1,320 @@
+/*---Reusable variables---*/
+
+:root {
+    --orange: #fc5c12;
+    --text-color: #1a3600;
+}
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-html {
-    background-color: white;
-    color: #F2AA4B;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    text-rendering: optimizeLegibility;
-}
-
-header {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.432)), url("header_pic.jpg");
+body {
+    font-family: Roboto, 'sans serif';
+    background-image: url(../kayaking-page/images/kayaking-main.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
-.text-box {
-    position: absolute;
-    width: 1140px;
-    top: 25%;
-    left: 5%;
+header,
+footer {
+    background-color: hsla(19, 98%, 53%, 0.5);
 }
 
-h1 {
-    font-size: 400%;
+footer p {
+    padding: 1em;
+    color: var(--text-color);
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    margin-top: 5em;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
-    color: #020873
+.container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.paddle-btn {
-    background-color: #F2AA4B;
-    border: 2px solid #F2AA4B;
-    font-weight: 500;
-}
+/*---Navigation---*/
 
-.show-more-btn {
-    border: 2px solid #F2AA4B;
-    color: #F2AA4B;
-    margin-left: 2em;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: #D88210;
-}
-
-.paddle-btn:hover,
-.paddle-btn:active {
-    border: 2px solid #D88210;
-}
-
-.show-more-btn:hover,
-.show-more-btn:active {
-    border: 2px solid #D88210;
-    color: #020873
-}
-
-.main-nav {
-    float: right;
+nav ul li {
     list-style: none;
+    display: inline-flex;
+    box-sizing: border-box;
 }
 
-.main-nav li {
-    display: inline-block;
-    margin: 60px 30px;
-}
-
-.main-nav li a:link {
-    color: #F2AA4B;
-    background-color: rgba(0, 0, 0, 0.5);
+nav ul li a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
-    border-bottom: 2px solid transparent;
-    padding: 8px 6px;
-    transition: border-bottom 0.2s;
+    margin: 1em;
+}
+
+.site-nav a:link,
+.site-nav a:visited {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 500;
+    color: var(--text-color);
+    box-sizing: border-box;
+    margin-right: 32px;
+}
+
+.site-nav a:hover,
+.site-nav a:active {
+    text-decoration: underline;
+}
+
+@media(max-width: 650px) {
+    nav ul li a {
+        font-size: 100%;
+        margin: 0.5em;
+    }
+}
+
+@media(max-width: 580px) {
+    nav ul li a {
+        font-size: 100%;
+        margin: 0.2em;
+    }
+}
+
+
+/*--Main Page--*/
+
+#main {
+    color: var(--orange);
+    font-size: 300%;
+    text-align: end;
+    margin-bottom: 250px;
+    margin-top: 250px;
+}
+
+@media(max-width: 650px) {
+    #main {
+        font-size: 200%;
+    }
+}
+
+@media(max-width: 500px) {
+    #main {
+        font-size: 150%;
+    }
+}
+
+
+
+/*--Info Section--*/
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2em;
+    margin-bottom: 5em;
+}
+
+.welcome,
+.about,
+.safety {
+    background-color: rgba(252, 92, 18, 0.705);
+    padding: 1em;
+}
+
+.welcome h1,
+.about h1,
+.safety h1 {
+   color: var(--text-color);
+}
+
+.welcome p,
+.about p,
+.safety p {
+   color: var(--text-color);
+   line-height: 1.7;
+}
+
+@media(max-width: 700px) {
+    #info {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #F2AA4B;
-
 }
+
+/*--Location Section--*/
+
+#locations {
+    background-color: rgba(252, 92, 18, 0.705);
+    color: var(--text-color);
+    display: grid;
+    grid-template-areas: 
+    'heading heading heading'
+    'oslo trondheim stavanger'
+    'oslo-p trondheim-p stavanger-p'
+    'oslo-btn trondheim-btn stavanger-btn';
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.heading {
+    grid-area: heading;
+    padding: 1em;
+}
+
+.oslo {
+    grid-area: oslo;
+    padding: 1em;
+    background-image: url(images/oslo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: auto;   
+}
+
+.oslo #pick-oslo a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.trondheim {
+    grid-area: trondheim;
+    padding: 1em;
+    background-image: url(images/trondheim.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 350px;
+    width: auto;
+}
+
+.stavanger {
+    grid-area: stavanger;
+    padding: 1em;
+    background-image: url(images/stavanger.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: auto;
+}
+
+.oslo p,
+.trondheim p,
+.stavanger p {
+    font-size: 120%;
+    font-weight: 500;
+    padding-bottom: 1em;
+}
+
+.oslo-p {
+    grid-area: oslo-p;
+    line-height: 1.7;
+}
+
+.oslo-p a {
+    color: var(--text-color);
+}
+
+.trondheim-p {
+    grid-area: trondheim-p;
+    line-height: 1.7;
+}
+
+.trondheim-p a {
+    color: var(--text-color);
+}
+
+.stavanger-p {
+    grid-area: stavanger-p;
+    line-height: 1.7;
+}
+
+.stavanger-p a {
+    color: var(--text-color);
+}
+
+.oslo-btn,
+.trondheim-btn,
+.stavanger-btn {
+    background-color: var(--text-color);
+    padding: 0.5em;
+}
+
+.oslo-btn a,
+.trondheim-btn a,
+.stavanger-btn a {
+    text-decoration: none;
+    color: var(--orange);
+    display: block;
+    text-align: center;
+}
+
+.oslo-btn a:hover,
+.trondheim-btn a:hover,
+.stavanger-btn a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 750px) {
+    #locations {
+        display: grid;
+        grid-template-areas: 
+        'heading'
+        'oslo'
+        'oslo-p'
+        'oslo-btn'
+        'trondheim'
+        'trondheim-p'
+        'trondheim-btn'
+        'stavanger'
+        'stavanger-p'
+        'stavanger-btn';
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .oslo {
+        grid-area: oslo;
+    }
+
+    .oslo-p {
+        grid-area: oslo-p;
+    }
+
+    .oslo-btn {
+        grid-area: oslo-btn;
+    }
+        
+    .trondheim {
+        grid-area: trondheim;
+    }
+
+    .trondheim-p {
+        grid-area: trondheim-p;
+    }
+
+    .trondheim-btn {
+        grid-area: trondheim-btn;
+    }
+
+    .stavanger {
+        grid-area: stavanger;
+    }
+
+    .stavanger-p {
+        grid-area: stavanger-p;
+    }
+
+    .stavanger-btn {
+        grid-area: stavanger-btn;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

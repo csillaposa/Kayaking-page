@@ -76,6 +76,11 @@ nav ul li a {
     text-decoration: underline;
 }
 
+.burger {
+    color: var(--text-color2);
+    padding: 0.5em;
+}
+
 @media(max-width: 650px) {
     nav ul li a {
         font-size: 100%;
@@ -84,9 +89,22 @@ nav ul li a {
 }
 
 @media(max-width: 580px) {
-    nav ul li a {
-        font-size: 100%;
-        margin: 0.2em;
+    .site-nav {
+      display: none;
+    }
+    
+    .site-nav.toggleMenu {
+      display: block;
+    }
+
+    nav ul li {
+        display: block;
+    }
+}
+  
+@media(min-width: 580px) {
+    .burger {
+      display : none;
     }
 }
 

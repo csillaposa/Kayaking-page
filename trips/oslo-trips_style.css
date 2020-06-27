@@ -15,7 +15,6 @@
     --text-color1: #fc5c12;
     --text-color2: #1a3600;
     --background-color: rgba(252, 92, 18, 0.705);
-    --template-bg: rgba(26, 54, 0, 0.705);
     --button-color: #4fa300;
 }
 
@@ -27,7 +26,7 @@
 
 body {
     font-family: Roboto, 'sans serif';
-    background-image: url(../trips/trips_trondheim_bg.jpg);
+    background-image: url(../trips/trips_oslo_bg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -40,6 +39,7 @@ footer {
 footer p {
     padding: 1em;
     color: var(--text-color2);
+    margin-top: 1em;
 }
 
 .container {
@@ -96,10 +96,6 @@ nav ul li a {
     .site-nav.toggleMenu {
       display: block;
     }
-
-    nav ul li {
-        display: block;
-    }
 }
   
 @media(min-width: 580px) {
@@ -108,78 +104,28 @@ nav ul li a {
     }
 }
 
+/*-----Trip Box----*/
 
-/*--Trips section--*/
-
-#trondheimtrips h1 {
-    font-size: 300%;
+h1 {
     color: var(--text-color2);
-    background-color: var(--background-color);
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-#trondheim {
-    color: var(--text-color1);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    margin-bottom: 2em;
-}
-
-@media(max-width: 400px) {
-    #trondheim {
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-
-#trondheim img {
-    object-fit: cover;
-    width: 100%;
-    
-}
-
-/*--Trip templates--*/
-
-article {
-    background-color: var(--template-bg);
     padding: 1em;
 }
 
-article img {
-    display: block;
-    margin-bottom: 1em;
-}
-
-article .button a {
-    padding: 0.5em 1em;
-    margin-top: 0.5em;
-    border: none;
-    text-decoration: none;
+.trip-box {
+    background-color: var(--background-color);
     color: var(--text-color2);
-    font-family: Roboto, 'sans serif';
-    font-size: 100%;
-    background-color: var(--button-color);
+    display: grid;
+    grid-gap: 1em;
+    padding: 1em;
+}
+
+.trip-box img {
+    width: 100%;
     display: block;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-article .button a:hover {
-    text-decoration: underline;
-}
-
-article .trip {
-    font-size: 200%;
-    margin-bottom: 0.5em;
-}
-
-article .details {
-    font-size: 120%;
-    margin-bottom: 0.5em;
-}
-
-article .description {
+.trip-box p {
+    margin-top: 1em;
     font-weight: 300;
 }

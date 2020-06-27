@@ -95,6 +95,10 @@ nav ul li a {
     .site-nav.toggleMenu {
       display: block;
     }
+
+    nav ul li {
+        display: block;
+    }
 }
   
 @media(min-width: 580px) {

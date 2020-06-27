@@ -13,7 +13,7 @@
 
 body {
     font-family: Roboto, 'sans serif';
-    background-image: url(../kayaking-page/images/kayaking-main.jpg);
+    background-image: url(../kayaking_in_Norway_2.0/images/kayaking-main.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -307,14 +307,34 @@ nav ul li a {
     }
 }
 
+/*--Photo Gallery--*/
 
+#gallery {
+    background-color: hsla(19, 98%, 53%, 0.705);
+    margin-bottom: 50px;
+    padding: 1em;
+}
 
+#gallery h1 {
+    color: var(--text-color);
+    padding: 1em;
+}
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
 
+}
 
+.gallery img {
+    width: 100%;
+    height: auto;
+}
 
-
-
-
-
-
+@media(max-width:500px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}

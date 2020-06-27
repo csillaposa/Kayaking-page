@@ -1,0 +1,167 @@
+/*---Reusable variables---*/
+
+/*--Blue version--*/
+
+/*:root {
+    --text-color1: #00b3fa;
+    --text-color2: #001336;
+    --background-color: rgba(0, 179, 250, 0.712);
+    --button-color: #fc5c12;
+}*/
+
+/*--Orange version--*/
+
+:root {
+    --text-color1: #fc5c12;
+    --text-color2: #1a3600;
+    --background-color: rgba(252, 92, 18, 0.705);
+    --template-bg: rgba(26, 54, 0, 0.705);
+    --button-color: #4fa300;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, 'sans serif';
+    background-image: url(../trips/trips_trondheim_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header,
+footer {
+    background-color: var(--background-color);
+}
+
+footer p {
+    padding: 1em;
+    color: var(--text-color2);
+}
+
+.container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*---Navigation---*/
+
+nav ul li {
+    list-style: none;
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 1em;
+}
+
+.site-nav a:link,
+.site-nav a:visited {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 500;
+    color: var(--text-color2);
+    box-sizing: border-box;
+    margin-right: 32px;
+}
+
+.site-nav a:hover,
+.site-nav a:active {
+    text-decoration: underline;
+}
+
+@media(max-width: 650px) {
+    nav ul li a {
+        font-size: 100%;
+        margin: 0.5em;
+    }
+}
+
+@media(max-width: 580px) {
+    nav ul li a {
+        font-size: 100%;
+        margin: 0.2em;
+    }
+}
+
+
+/*--Trips section--*/
+
+#trondheimtrips h1 {
+    font-size: 300%;
+    color: var(--text-color2);
+    background-color: var(--background-color);
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#trondheim {
+    color: var(--text-color1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin-bottom: 2em;
+}
+
+@media(max-width: 400px) {
+    #trondheim {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+#trondheim img {
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+/*--Trip templates--*/
+
+article {
+    background-color: var(--template-bg);
+    padding: 1em;
+}
+
+article img {
+    display: block;
+    margin-bottom: 1em;
+}
+
+article .button a {
+    padding: 0.5em 1em;
+    margin-top: 0.5em;
+    border: none;
+    text-decoration: none;
+    color: var(--text-color2);
+    font-family: Roboto, 'sans serif';
+    font-size: 100%;
+    background-color: var(--button-color);
+    display: block;
+    text-align: center;
+}
+
+article .button a:hover {
+    text-decoration: underline;
+}
+
+article .trip {
+    font-size: 200%;
+    margin-bottom: 0.5em;
+}
+
+article .details {
+    font-size: 120%;
+    margin-bottom: 0.5em;
+}
+
+article .description {
+    font-weight: 300;
+}

@@ -1,8 +1,21 @@
 /*---Reusable variables---*/
 
+/*--Blue version--*/
+
+/*:root {
+    --text-color1: #00b3fa;
+    --text-color2: #001336;
+    --background-color: rgba(0, 179, 250, 0.712);
+    --button-color: #fc5c12;
+}*/
+
+/*--Orange version--*/
+
 :root {
-    --orange: #fc5c12;
-    --text-color: #1a3600;
+    --text-color1: #fc5c12;
+    --text-color2: #1a3600;
+    --background-color: rgba(252, 92, 18, 0.705);
+    --button-color: #4fa300;
 }
 
 * {
@@ -20,12 +33,12 @@ body {
 
 header,
 footer {
-    background-color: hsla(19, 98%, 53%, 0.5);
+    background-color: var(--background-color);
 }
 
 footer p {
     padding: 1em;
-    color: var(--text-color);
+    color: var(--text-color2);
 }
 
 .container {
@@ -52,7 +65,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 120%;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--text-color2);
     box-sizing: border-box;
     margin-right: 32px;
 }
@@ -80,7 +93,7 @@ nav ul li a {
 /*--Main Page--*/
 
 #main {
-    color: var(--orange);
+    color: var(--text-color1);
     font-size: 300%;
     text-align: end;
     margin-bottom: 250px;
@@ -113,20 +126,20 @@ nav ul li a {
 .welcome,
 .about,
 .safety {
-    background-color: rgba(252, 92, 18, 0.705);
+    background-color: var(--background-color);
     padding: 1em;
 }
 
 .welcome h1,
 .about h1,
 .safety h1 {
-   color: var(--text-color);
+   color: var(--text-color2);
 }
 
 .welcome p,
 .about p,
 .safety p {
-   color: var(--text-color);
+   color: var(--text-color2);
    line-height: 1.7;
 }
 
@@ -141,8 +154,8 @@ nav ul li a {
 /*--Location Section--*/
 
 #locations {
-    background-color: rgba(252, 92, 18, 0.705);
-    color: var(--text-color);
+    background-color: var(--background-color);
+    color: var(--text-color2);
     display: grid;
     grid-template-areas: 
     'heading heading heading'
@@ -210,7 +223,7 @@ nav ul li a {
 }
 
 .oslo-p a {
-    color: var(--text-color);
+    color: var(--text-color2);
 }
 
 .trondheim-p {
@@ -219,7 +232,7 @@ nav ul li a {
 }
 
 .trondheim-p a {
-    color: var(--text-color);
+    color: var(--text-color2);
 }
 
 .stavanger-p {
@@ -228,13 +241,13 @@ nav ul li a {
 }
 
 .stavanger-p a {
-    color: var(--text-color);
+    color: var(--text-color2);
 }
 
 .oslo-btn,
 .trondheim-btn,
 .stavanger-btn {
-    background-color: var(--text-color);
+    background-color: var(--button-color);
     padding: 0.5em;
 }
 
@@ -242,7 +255,8 @@ nav ul li a {
 .trondheim-btn a,
 .stavanger-btn a {
     text-decoration: none;
-    color: var(--orange);
+    color: var(--text-color2);
+    font-weight: 500;
     display: block;
     text-align: center;
 }
@@ -310,13 +324,13 @@ nav ul li a {
 /*--Photo Gallery--*/
 
 #gallery {
-    background-color: hsla(19, 98%, 53%, 0.705);
+    background-color: var(--background-color);
     margin-bottom: 50px;
     padding: 1em;
 }
 
 #gallery h1 {
-    color: var(--text-color);
+    color: var(--text-color2);
     padding: 1em;
 }
 

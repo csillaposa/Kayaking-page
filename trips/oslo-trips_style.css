@@ -96,6 +96,10 @@ nav ul li a {
     .site-nav.toggleMenu {
       display: block;
     }
+
+    nav ul li {
+        display: block;
+    }
 }
   
 @media(min-width: 580px) {
@@ -106,12 +110,15 @@ nav ul li a {
 
 /*-----Trip Box----*/
 
-h1 {
+h2 {
     color: var(--text-color2);
     padding: 1em;
 }
 
 .trip-box {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--background-color);
     color: var(--text-color2);
     display: grid;
@@ -127,5 +134,12 @@ h1 {
 
 .trip-box p {
     margin-top: 1em;
-    font-weight: 300;
+    font-weight: 500;
+}
+
+@media(max-width: 580px) {
+    .trip-box {
+        width: 100%;
+        display: grid;
+    }
 }

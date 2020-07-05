@@ -139,7 +139,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 2em;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 }
 
 .welcome,
@@ -175,7 +175,7 @@ nav ul li a {
 .select-location {
     background-color: var(--background-color);
     color: var(--text-color2);
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     padding: 1em;
 }
 
@@ -245,7 +245,7 @@ nav ul li a {
 
 #gallery {
     background-color: var(--background-color);
-    margin-bottom: 50px;
+    margin-bottom: 4em;
     padding: 1em;
 }
 

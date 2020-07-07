@@ -137,7 +137,7 @@ h2 {
     font-weight: 500;
 }
 
-@media(max-width: 580px) {
+@media(max-width: 700px) {
     .trip-box {
         width: 100%;
         display: grid;

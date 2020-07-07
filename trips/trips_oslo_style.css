@@ -128,7 +128,14 @@ nav ul li a {
     margin-bottom: 2em;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 800px) {
+    #oslo {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 540px) {
     #oslo {
         display: grid;
         grid-template-columns: repeat(1,1fr);
